@@ -2,4 +2,8 @@
 
 import welcomeUser from '../src/cli.js'
 
-welcomeUser()
+console.log('Welcome to the Brain Games!')
+
+const name = welcomeUser()
+
+console.log(`Hello, ${name}!`)

@@ -1,22 +1,24 @@
-.PHONY: install brain-games publish link lint
+.PHONY: install brain-games publish link lint brain-even
 
 # Установка зависимостей и настройка прав
 install:
 	npm ci
-	chmod +x bin/brain-games.js
+	chmod +x bin/brain-games.js bin/brain-even.js
 
-# Запуск проекта
+# Запуск игр
 brain-games:
 	node bin/brain-games.js
 
-# Тест перед публикацией (без реальной отправки)
+brain-even:
+	node bin/brain-even.js
+
+# Публикация и линкинг
 publish:
 	npm publish --dry-run
 
-# Локальная установка (может потребоваться sudo)
 link:
 	npm link
 
-# Запуск линтера. Флаг --fix позволяет автоматически исправить ошибки.
+# Линтинг
 lint:
 	npx eslint --fix .
