@@ -1,4 +1,4 @@
-.PHONY: install brain-games publish link
+.PHONY: install brain-games publish link lint
 
 # Установка зависимостей и настройка прав
 install:
@@ -16,3 +16,7 @@ publish:
 # Локальная установка (может потребоваться sudo)
 link:
 	npm link
+
+# Запуск линтера. Флаг --fix позволяет автоматически исправить ошибки.
+lint:
+	npx eslint --fix .
