@@ -3,7 +3,7 @@
 # Установка зависимостей и настройка прав
 install:
 	npm ci
-	chmod +x bin/brain-games.js bin/brain-even.js bin/brain-gcd.js
+	chmod +x bin/brain-games.js bin/brain-even.js bin/brain-gcd.js bin/brain-progression.js
 
 # Запуск игр
 brain-games:
@@ -17,6 +17,9 @@ brain-calc:
 
 brain-gcd:
 	node bin/brain-gcd.js
+
+brain-progression:
+	node bin/brain-progression.js
 
 # Публикация и линкинг
 publish:

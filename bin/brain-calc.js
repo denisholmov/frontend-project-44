@@ -1,6 +1,7 @@
 #!/usr/bin/env node
+// ↑ Шебанг (обязательно!) — указывает, что скрипт запускается через Node.js
 
-import { generationMathOperator, calcNums, generationNumber } from '../helpers/helpers.js';
+import { generationMathOperator, calcNums, generationNumber } from '../src/helpers/helpers.js';
 
 const generateCalcQuestion = () => {
   const a = generationNumber();
