@@ -74,3 +74,15 @@ export const replaceRandomWithDots = arr => {
 
   return [newArr, arr[positionPoints]];
 };
+
+export const isPrime = num => {
+  if (num <= 1) return false; // 0 и 1 — не простые
+  if (num === 2) return true; // 2 — простое
+
+  // Проверяем делители от 2 до корня из числа
+  for (let i = 2; i <= Math.sqrt(num); i++) {
+    if (num % i === 0) return false;
+  }
+
+  return true;
+};
