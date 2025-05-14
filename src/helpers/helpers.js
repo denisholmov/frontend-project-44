@@ -52,16 +52,17 @@ export const generationNumber = () => {
 };
 
 export const generationArithmeticProgression = () => {
-  const lengthProgression = Math.floor(Math.random() * (100 - 5 + 1)) + 5;
+  const lengthProgression = Math.floor(Math.random() * (20 - 5 + 1)) + 5;
   const stepProgression = Math.floor(Math.random() * (10 - 1 + 1)) + 1;
+  const start = Math.floor(Math.random() * 100);
 
-  let numForProgression = stepProgression;
+  let current = start;
 
   const newArr = [];
 
   for (let i = 0; i < lengthProgression; i += 1) {
-    newArr.push(numForProgression);
-    numForProgression = numForProgression + stepProgression;
+    newArr.push(current);
+    current += stepProgression;
   }
 
   return newArr;
@@ -73,8 +74,3 @@ export const replaceRandomWithDots = arr => {
 
   return [newArr, arr[positionPoints]];
 };
-
-// Функция с арифмитической прогрессией
-// 1. Генерация количества чисел
-// 2. Определение позиции двух точек, то есть загаданного числа.
-// 3.
