@@ -12,8 +12,7 @@ export const calcNums = (num1, num2, operator) => {
 }
 
 export const generationMathOperator = () => {
-  // nosonar - not used for security purposes
-  const num = Math.floor(Math.random() * 3)
+  const num = Math.floor(Math.random() * 3) // nosonar - not used for security purposes
 
   switch (num) {
     case 0:
@@ -49,15 +48,15 @@ export const gcd = (a, b) => {
 }
 
 export const generationNumber = () => {
-  // nosonar - not used for security purposes
-  return Math.floor(Math.random() * 101)
+  return Math.floor(Math.random() * 101) // nosonar - not used for security purposes
 }
 
 export const generationArithmeticProgression = () => {
-  // nosonar - not used for security purposes
-  const lengthProgression = Math.floor(Math.random() * (20 - 5 + 1)) + 5
-  const stepProgression = Math.floor(Math.random() * (10 - 1 + 1)) + 1
-  const start = Math.floor(Math.random() * 100)
+  const lengthProgression = Math.floor(Math.random() * (20 - 5 + 1)) + 5 // nosonar - not used for security purposes
+
+  const stepProgression = Math.floor(Math.random() * (10 - 1 + 1)) + 1 // nosonar - not used for security purposes
+
+  const start = Math.floor(Math.random() * 100) // nosonar - not used for security purposes
 
   let current = start
 
@@ -72,8 +71,7 @@ export const generationArithmeticProgression = () => {
 }
 
 export const replaceRandomWithDots = (arr) => {
-  // nosonar - not used for security purposes
-  const positionPoints = Math.floor(Math.random() * arr.length)
+  const positionPoints = Math.floor(Math.random() * arr.length) // nosonar - not used for security purposes
   const newArr = arr.map((item, index) => (index !== positionPoints ? item : '..'))
 
   return [newArr, arr[positionPoints]]
