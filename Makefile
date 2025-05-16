@@ -33,4 +33,4 @@ link:
 
 # Линтинг
 lint:
-	npx eslint --fix .
+	npx eslint .
