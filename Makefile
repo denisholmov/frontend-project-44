@@ -1,4 +1,4 @@
-.PHONY: install brain-games publish link lint brain-even brain-calc brain-prime brain-progression
+.PHONY: install brain-games publish link lint brain-even brain-calc brain-prime brain-progression lint-fix
 
 # Установка зависимостей и настройка прав
 install:
@@ -34,3 +34,6 @@ link:
 # Линтинг
 lint:
 	npx eslint .
+
+lint-fix: 
+	npx exlint --fix .
